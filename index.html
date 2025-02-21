@@ -215,7 +215,7 @@
         <!-- footer  -->
         <section class="sec-3-ch">
             <div class="div-plus">
-                <div class="bg-green-haloww">
+                <div class="bg-green-haloww" id="hallow">
                     <a href="#" id="Pluser"> <img src="../styles/pics/Plus.png" id="Plus-Rcoin2" class="plus-charger" alt="">
                     </a>
                 </div>
@@ -246,6 +246,25 @@ BtnShoed?.addEventListener('click', ()=>{
 
      });
 });
+
+      let hallow = document.getElementById("Pluser");
+      document.getElementById("Pluser").addEventListener("click", function() {
+        var button = this;
+
+        // غیرفعال کردن دکمه
+        button.disabled = true;
+        // تغییر رنگ پس‌زمینه به قرمز
+        hallow.style.boxShadow = "0px 0px 15px 1px gray"; // اضافه کردن سایه باکس
+    
+        // بعد از ۵ ثانیه
+        setTimeout(function() {
+            // فعال کردن دکمه
+            button.disabled = false;
+            // تغییر رنگ پس‌زمینه به حالت اولیه
+            hallow.style.boxShadow = "0px 0px 15px 1px cyan"; // اضافه کردن سایه باکس
+    
+        }, 5000);
+    });
     </script>
 </body>
 
