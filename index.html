@@ -181,8 +181,19 @@
     height: 4rem;
     background-color: black;
     border-radius: 100%;
-    box-shadow: 0px 0px 15px 1px red;
+    box-shadow: 0px 0px 15px 1px cyan;
 }
+.bg-gray-haloww{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: black;
+    border-radius: 100%;
+    box-shadow: 0px 0px 15px 1px gray;
+  }
   </style>
 </head>
 
@@ -254,16 +265,12 @@ BtnShoed?.addEventListener('click', ()=>{
         
         button.style.pointerEvents = "none"
         
-        hallow.style.boxShadow = "0px 0px 15px 1px gray"; // اضافه کردن سایه باکس
-        hallow.style.borderRadius = "100%"; // تنظیم شعاع حاشیه به 10 پیکسل
-    
+        hallow.className = "bg-gray-haloww";
         
         setTimeout(function() {
             
             button.style.pointerEvents = "auto";
-            hallow.style.boxShadow = "0px 0px 15px 1px cyan"; // اضافه کردن سایه باکس
-            hallow.style.borderRadius = "100%";
-    
+            hallow.className = "bg-green-haloww";
         }, 5000);
     });
     </script>
