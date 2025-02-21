@@ -251,17 +251,18 @@ BtnShoed?.addEventListener('click', ()=>{
       document.getElementById("Pluser").addEventListener("click", function() {
         var button = this;
 
-        // غیرفعال کردن دکمه
-        button.disabled = true;
-        // تغییر رنگ پس‌زمینه به قرمز
+        
+        button.style.pointerEvents = "none"
+        
         hallow.style.boxShadow = "0px 0px 15px 1px gray"; // اضافه کردن سایه باکس
+        hallow.style.borderRadius = "100%"; // تنظیم شعاع حاشیه به 10 پیکسل
     
-        // بعد از ۵ ثانیه
+        
         setTimeout(function() {
-            // فعال کردن دکمه
-            button.disabled = false;
-            // تغییر رنگ پس‌زمینه به حالت اولیه
+            
+            button.style.pointerEvents = "auto";
             hallow.style.boxShadow = "0px 0px 15px 1px cyan"; // اضافه کردن سایه باکس
+            hallow.style.borderRadius = "100%";
     
         }, 5000);
     });
