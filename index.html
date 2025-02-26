@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best-Coin</title>
     <link rel="stylesheet" href="./style/charg.css">
+  <script src="https://sad.adsgram.ai/js/sad.min.js"></script>;
     <script src="https://telegram.org/js/telegram-web-app.js?56"></script> 
 <script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
           <script>
@@ -253,11 +254,22 @@ document.getElementById('BackBtn').addEventListener('click',()=>{
 let BtnShoed = document.getElementById('Pluser')
 
 
-
+const AdController = window.Adsgram.init({ blockId: "int-8548" });
+      
 BtnShoed?.addEventListener('click', ()=>{
      window.TelegramAdsController.triggerNativeNotification().then((result) =>{
     
      }).catch((result)=>{
+       
+               AdController.show().then((result) => {
+                 alert("ads show")
+                // user watch ad till the end or close it in interstitial format
+                // your code to reward user for rewarded format
+             }).catch((result) => {
+                 alert("ads cant show")
+                // user get error during playing ad
+                // do nothing or whatever you want
+             })
 
      });
 });
